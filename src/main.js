@@ -3,6 +3,10 @@
 import Vue from 'vue';
 // 导入app组件
 import app from './App.vue';
+// 1.1导入vue-router
+import vueRouter from 'vue-router'
+// 1.2 项目中使用vue-router
+Vue.use(vueRouter)
 
 // 导入mui样式
 import './lib/mui/css/mui.css';
@@ -14,7 +18,11 @@ import {Header} from 'mint-ui';
 // 在项目中使用
 Vue.component(Header.name,Header);
 
+// 导入router.js
+import router from "./router.js"
+
 var vm = new Vue({
     el:"#app",
-    render: el => el(app)
+    render: el => el(app),
+    router //路由挂在到实例中
 })

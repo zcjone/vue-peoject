@@ -10,4 +10,11 @@
           + 使用mui的icons-extra.html中的购物车图标
           + 把icons-extra.css和mui-icons-extra.ttf放到项目中合适的位置
           + 在main.js中到如icons-extra.css样式
+        +配置路由
+          + 在main.js中导入路由文件vue-router
+          + 在项目中使用vue-router
+          + 导入路由配置的router.js文件
+          + 在实例中挂在路由配置
+          + 新建文件夹，在文件夹中新建4个.vue文件
+          + 在router.js文件中配置路由
     3.在页面中间放置router-view用来展示路由子组件
