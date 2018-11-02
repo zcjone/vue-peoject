@@ -41,7 +41,8 @@
 </script>
 <style lang="less" scoped>
     .app-container {
-        padding: 50px;
+        padding-top: 40px;
+        overflow-x: hidden;
     }
 </style>
 
