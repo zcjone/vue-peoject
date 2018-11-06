@@ -36,5 +36,9 @@
         .v-enter-active,
         .v-enter-active {
             transition: all 0.5s ease;
-        }
-    
+        }  
+    7. 制作新闻资讯页面
+      + 创建组件，配置路由
+      + 使用mui的media-list.html的样式进行布局
+      + 获取数据，渲染页面
+    8. 制作新闻详情页面

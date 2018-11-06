@@ -9,24 +9,40 @@
         
         <!-- 九宫格导航 -->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <router-link to="/home/news">
                     <img src="../../images/menu/menu1.png" alt="">
-                    <div class="mui-media-body">新闻资讯</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                    <div class="mui-media-body">新闻资讯</div>
+                </router-link>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="#">
                     <img src="../../images/menu/menu2.png" alt="">
-                    <div class="mui-media-body">图片分享</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                    <div class="mui-media-body">图片分享</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="#">
                     <img src="../../images/menu/menu3.png" alt="">
-                    <div class="mui-media-body">商品购买</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                    <div class="mui-media-body">商品购买</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="#">
                     <img src="../../images/menu/menu4.png" alt="">
                     <div class="mui-media-body">留言反馈</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="#">
                     <img src="../../images/menu/menu5.png" alt="">
-                    <div class="mui-media-body">视频专区</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                    <div class="mui-media-body">视频专区</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="#">
                     <img src="../../images/menu/menu6.png" alt="">
-                    <div class="mui-media-body">联系我们</div></a></li>
+                    <div class="mui-media-body">联系我们</div>
+                </a>
+            </li>
         </ul> 
     </div>
 </template>
@@ -42,9 +58,9 @@ export default {
         this.getluntu()
     },
     methods: {
-        getluntu() {//获取轮播图
-            this.$http.get("https://www.apiopen.top/meituApi?page=1").then(result => {
-                if(result.body.code == 200) {
+        getluntu() {//获取轮播图数据
+            this.$http.get("meituApi?page=1").then(result => {
+                if(result.status == 200) {
                     this.lunbotulists = result.body.data;
                 }else {
                     Toast({

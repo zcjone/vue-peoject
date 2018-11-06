@@ -8,10 +8,21 @@ import vueRouter from 'vue-router'
 // 1.2 项目中使用vue-router
 Vue.use(vueRouter)
 
+// 导入时间插件
+import moment from 'moment'
+
+// 定义全局过滤器
+Vue.filter('dateFormat', function (dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+    return moment(dateStr).format(pattern);
+})
+  
+
 // 1.1导入vue-resource
 import vueResource from 'vue-resource'
 // 1.2 安装vue-resource
 Vue.use(vueResource)
+// 全局配置路径
+Vue.http.options.root = 'https://www.apiopen.top';
 
 // 导入mui样式
 import './lib/mui/css/mui.css'
