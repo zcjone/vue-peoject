@@ -3,7 +3,9 @@
        <!-- Header -->
         <mt-header fixed title="vue项目"></mt-header>
        <!-- router-view -->
-        <router-view></router-view>
+        <transition>
+            <router-view></router-view>
+        </transition>
        <!-- tabber -->
         <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -43,6 +45,15 @@
     .app-container {
         padding-top: 40px;
         overflow-x: hidden;
+    }
+    .v-enter,
+    .v-leave-to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    .v-enter-active,
+    .v-enter-active {
+        transition: all 0.5s ease;
     }
 </style>
 
